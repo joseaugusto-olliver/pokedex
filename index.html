@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./icon/icon-pokebola.webp"> <!--Icone no title-->
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="./CSS/background-color.css">
+</head>
+<body>
+
+    <main>
+        <img src="#" alt="pokemon" class="pokemon__image">
+
+        <div class="pokemon-info">
+            <div class="container">
+                <input type="checkbox" id="menu" class="container__botao">
+                <label for="menu" class="menu__rotulo">
+                    <span class="cabecalho__menu-hamburguer container__imagem"></span>
+                </label>
+                <div class="balao">
+                    <img src="./img/Pokeball-PNG.png" class="pokeball">
+                    <img src="#" alt="pokemon" class="pokemon__image_balao">
+                    <h1 class="localizacao-texto">Localização</h1>
+                    <img src="./img/localizacao.png" class="localizacao">
+                    <ol style="list-style: none;" class="pokemon-status">
+                        <li class="pokemon__status_name" style="list-style: none;">Name</li>
+                        <li class="pokemon__status_number">-</li>
+                        <li class="pokemon__status_type_name">Type</li>
+                        <li class="pokemon__status_types"></li>
+                        <li class="pokemon__status_name_hability">Hability</li>
+                        <li class="pokemon__status_hability"></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <h1 class="pokemon__data">
+            <span class="pokemon__number"></span> - <!--Span é um conteiner generico em linha para conteúdo fraseado , que não representa nada por natureza.-->
+            <span class="pokemon__name"></span>
+        </h1>
+
+        <form class="form">
+            <input 
+                type="search"
+                class="input__search"
+                placeholder="Name or Number"
+                required
+            />
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-prev">Prev &lt;</button>
+            <button class="button btn-next">Next &gt;</button>
+        </div>
+
+        <img src="./img/pokedex.png" alt="pokedex" class="pokedex">
+    </main>
+    
+    <script src="./JS/script.js"></script>
+</body>
+</html>

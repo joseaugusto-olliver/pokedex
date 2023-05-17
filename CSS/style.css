@@ -1,0 +1,260 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    min-height: 100vh;
+}
+
+main {
+    display: inline-block;
+    margin-top: 8%;
+    position: relative;
+}
+
+.pokedex {
+    width: 100%;
+    padding: 15%;
+    max-width: 100vh;
+}
+
+.cabecalho__menu-hamburguer {
+    position: absolute;
+    left: 63%;
+    bottom: 73%;
+    width: 8%;
+    height: 10%;
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.pokemon__image {
+    position: absolute;
+    bottom: 53%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 15%;  /*Para definir um tamanho max da IMG*/
+}
+
+.balao {
+    position: absolute;
+    bottom: 85%;
+    left: 41%;
+    transform: translate(-63%, 20%);  
+    width:60%;
+    height: 30%; 
+    border: 1px solid black;
+    border-radius: 1.5rem 1.5rem .2rem 1.5rem;
+    background: #d30a40;
+    margin: 0 20% 0 0;
+    display: block;
+}
+
+.container__botao {
+    display:none;
+}
+
+.container__botao:checked ~ .menu__rotulo > .cabecalho__menu-hamburguer {
+    background-image: url("../img/menu_houver.svg");
+}
+
+.container__botao:checked ~ .balao {
+    display: none;
+}
+
+.pokeball {
+    position: absolute;
+    bottom: 28%;
+    left: 33%;
+    transform: translate(-63%, 20%);
+    height: 80%;
+    width: 50%;
+    opacity: .3;
+    background: white;
+    border-radius: 2rem;
+}
+
+.pokemon__image_balao {
+    position: absolute;
+    bottom: 17%;
+    left: 35%;
+    transform: translate(-63%, 20%);
+    height: 110%; 
+}
+
+.localizacao-texto {
+    position: absolute;
+    bottom: 88%;
+    left: 84.5%;
+    transform: translate(-63%, 20%);
+    font-size: 70%;
+    background: #000;
+    color: white;
+    padding: 2% 2% 2% 12%;
+    border-radius: 1.5rem 2.3rem 0 1.5rem;
+    text-transform: capitalize;
+}
+
+.localizacao {
+    position: absolute;
+    bottom: 89%;
+    left: 69%;
+    transform: translate(-63%, 20%);
+    height: 8%;
+}
+
+.pokemon__status_name {
+    color: white;
+    background: rgb(29, 28, 28);
+    position: absolute;
+    bottom: 71%;
+    left: 82%;
+    transform: translate(-63%, 20%);
+    width: 48%;
+    padding: 1% 2%;
+    border: 2px solid black;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    font-size: clamp(13px, 3vw, 18px);
+}
+
+.pokemon__status_number {
+    color: white;
+    position: absolute;
+    bottom: 76%;
+    left: 43%;
+    transform: translate(-63%, 20%);
+    width: 10%;
+    font-size: clamp(13px, 3vw, 18px);
+    border: 2px solid #d30a40;
+    border-radius: 50%;
+    background: rgb(29, 28, 28);
+}
+
+.pokemon__status_type_name {
+    background: white;
+    position: absolute;
+    bottom: 55%;
+    left: 82%;
+    transform: translate(-63%, 20%);
+    width: 47%;
+    border: 2px solid black;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.pokemon__status_types {
+    background: gray;
+    position: absolute;
+    bottom: 42%;
+    left: 82%;
+    transform: translate(-63%, 20%);
+    width: 47%;
+    height: 13.6%;
+    border: 2px solid black;
+    border-radius: 0 0 .5rem .5rem;
+    text-transform: capitalize;
+    font-size: clamp(13px, 3vw, 18px);
+}
+
+.pokemon__status_name_hability {
+    background: white;
+    position: absolute;
+    bottom: 24%;
+    left: 82%;
+    width: 47%;
+    transform: translate(-63%, 20%);
+    border: 2px solid black;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.pokemon__status_hability {
+    background: gray;
+    position: absolute;
+    bottom: 11%;
+    left: 82%;
+    transform: translate(-63%, 20%);
+    width: 47%;
+    height: 13.6%;
+    padding: .3rem 0;
+    border: 2px solid black;
+    border-radius: 0 0 .5rem .5rem;
+    text-transform: capitalize;
+    font-size: clamp(13px, 3vw, 12px);
+}
+
+.pokemon__data {
+    position: absolute;
+    font-size: clamp(8px, 3vw, 18px);  /*Definir um min, um meio termo, e um Max*/
+    color: #aaa;
+    top: 53%;
+    right: 35%;
+}
+
+.pokemon__name {
+    color: #3a444d;
+    text-transform: capitalize;
+}
+
+.form {
+    position: absolute;
+    width: 52%;
+    top: 62%;
+    right: 26.5%;
+}
+
+.input__search {
+    width: 100%;
+    padding: 4%;
+    border: 2px solid #333;
+    border-radius: .5rem;
+    color: #3a444d;
+    background-color: #e3e3e3;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 1rem);
+    box-shadow: -1px 2px 0 #888, -3px 5px 0 #333;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+.button {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #333;
+    border-radius: .5rem;
+    color: white;
+    background-color: #444;
+    text-align: center;
+    font-size: clamp(8px, 2vw, 1rem);
+    box-shadow: -1px 2px 0 #222, -3px 5px 0 #000;
+}
+
+.button:active {
+    box-shadow: inset -1px 2px 0 #222;
+    font-size: .9rem;
+}
+
+
+@media screen and (max-width: 480px){
+    main {
+        max-width: 380px;
+        width: 100vh;
+        margin-top: 25%;
+    }
+}
